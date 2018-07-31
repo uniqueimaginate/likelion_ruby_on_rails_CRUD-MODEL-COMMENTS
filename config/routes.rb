@@ -1,16 +1,13 @@
 Rails.application.routes.draw do
   # Create
   get '/notes/new' => 'notes#new'
-  get '/notes/create' => 'notes#create'
+  post '/notes' => 'notes#create'
   # Read
   get '/notes' => 'notes#index' 
   get '/notes/:id' => 'notes#show'
   # Update
   get '/notes/:id/edit' => 'notes#edit'
-  get '/notes_update' => 'notes#update'
-  
+  patch '/notes/:id' => 'notes#update'
   # Destroy
-  get '/notes/:id/destroy' => 'notes#destroy'
-
-
+  delete '/notes/:id' => 'notes#destroy'
 end

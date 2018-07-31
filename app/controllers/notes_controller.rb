@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
   # Create
   def new
+      @token = form_authenticity_token
   end
   
   def create
@@ -25,10 +26,11 @@ class NotesController < ApplicationController
   # Update
   def edit
     @note = Note.find params[:id]
+    @token = form_authenticity_token
   end
   
   def update
-    note = Note.find params[:note_id]
+    note = Note.find params[:id]
     note.title = params[:input_title]
     note.content = params[:input_content]
     note.save
