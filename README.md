@@ -9,3 +9,4 @@
 
 * third_commit : update
 * forth_commit : RESTful_routing
+* fifth_commit : Model_Association
