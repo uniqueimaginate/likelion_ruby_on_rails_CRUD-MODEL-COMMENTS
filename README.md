@@ -1,25 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+2018.07.30
 
-Things you may want to cover:
+first_commit : Model, create, read
+second_commit : destroy
 
-* Ruby version
+2018.07.31
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-Ruby_on_rails
+third_commit : update
