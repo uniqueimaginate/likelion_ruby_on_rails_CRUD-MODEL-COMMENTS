@@ -9,8 +9,6 @@ class NotesController < ApplicationController
     note.title = params[:input_title]
     note.content = params[:input_content]
     note.save
-    
-    # TODO : 'notes/new' 로 리다이렉트 되는 걸 변경한다.
     redirect_to '/notes/#{note.id}'
   end
   
@@ -21,6 +19,8 @@ class NotesController < ApplicationController
   
   def show
     @note = Note.find params[:id]
+    @token = form_authenticity_token
+    @comments = @note.comments
   end
   
   # Update
@@ -34,7 +34,7 @@ class NotesController < ApplicationController
     note.title = params[:input_title]
     note.content = params[:input_content]
     note.save
-    redirect_to '/notes'
+    redirect_to "/notes/#{note.id}"
   end
   
   # Destroy
